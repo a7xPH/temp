@@ -1,0 +1,180 @@
+@import include/bourbon
+@import include/reset
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Slabo+27px')
+
+$slabo: 'Slabo 27px', serif
+$os: 'Open Sans', sans-serif
+
+*
+  box-sizing: border-box
+
+body
+  font-family: $os
+  background:
+    image: url("../images/background.jpg")
+    position: top center
+    size: cover
+    attachment: fixed
+    repeat: no-repeat
+
+.fade-in-scroll
+  opacity: 0
+  +transform(translateY(50px))
+
+section
+  min-height: 100vh
+  width: 100%
+  padding: 30px 60px
+  position: relative
+  overflow: hidden
+
+  &.first-section
+    .logo
+      p
+        color: white
+        font-family: $slabo
+
+        &.the
+          color: #d8d8d8
+          font-size: 36px
+
+        &.fourth
+          font-size: 54px
+          letter-spacing: 3px
+
+    .centered-text
+      font:
+        size: 30px
+        weight: 300
+      color: white
+      width: 740px
+      text-align: center
+      position: absolute
+      top: 45%
+      left: 50%
+      +transform(translate(-50%, -50%))
+      line-height: 40px
+
+      a
+        display: inline-block
+        margin-top: 40px
+        font:
+          size: 16px
+          weight: 600
+        border: 2px solid #cc4c4c
+          radius: 30px
+        padding: 3px 22px 4px
+        letter-spacing: 0.5px
+        text-transform: uppercase
+        +transition(all 0.3s linear)
+
+        &:hover
+          padding: 3px 30px 4px
+          background: #cc4c4c
+          color: #303030
+
+
+      span
+        line-height: 100px
+        border: 1px solid white
+          radius: 20px
+        padding: 2px 10px 5px
+        font-size: 16px
+
+    .buttons
+      position: absolute
+      left: 0
+      bottom: 90px
+      text-align: center
+      width: 100%
+
+      button
+        background: none
+        font:
+          family: $slabo
+          size: 26px
+        border: 1px solid white
+        letter-spacing: 1px
+        color: white
+        padding: 26px
+        cursor: pointer
+
+        &:first-child
+          margin-right: 10px
+
+  &.second-section
+    background: white
+    min-height: 100%
+    position: relative
+    padding: 0
+    display: table
+    width: 100%
+
+    .half-absolute
+      height: 100vh
+      width: 65%
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 1
+
+      img
+        width: 100%
+        position: absolute
+        bottom: 0
+
+    .half
+      margin-left: 60%
+      width: 40%
+      min-height: 100vh
+      position: relative
+      z-index: 2
+
+      .second-half
+        width: 80%
+        margin: 50px auto
+
+        p
+          text-align: justify
+          line-height: 20px
+          font-size: 14px
+
+        .half-content
+          p.content-title
+            font:
+              family: $slabo
+              size: 30px
+            margin-bottom: 20px
+            color: #cc4c4c
+
+          p.content-sub-title
+            font:
+              family: $slabo
+              size: 30px
+            margin-bottom: 20px
+            color: #cc4c4c
+
+          &:not(:first-of-type)
+            margin-top: 50px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .deleteme
